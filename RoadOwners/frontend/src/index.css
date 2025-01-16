@@ -209,7 +209,6 @@ body {
 .add-product-page button:hover {
   background-color: #333;
 }
-/* Login and Registration Page Styles */
 .auth-page {
   max-width: 300px;
   margin: 50px auto;

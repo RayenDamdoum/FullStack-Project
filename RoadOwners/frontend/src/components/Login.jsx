@@ -10,7 +10,7 @@ const Login = () => {
     try {
       const response = await loginUser ({ email, password })
       console.log("Login successful", response.data)
-      localStorage.setItem("token", response.data.token)
+      localStorage.setItem("token",response.data.token)
       window.location.href="/"
     } catch(error) {
       console.error("Login failed",error)

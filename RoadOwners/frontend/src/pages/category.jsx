@@ -31,10 +31,10 @@ const category=()=>{
         fetchProducts()
     },[])
 
-    const handleAdd=async(e)=>{
-      e.preventDefault()
+    // const handleAdd=async(e)=>{
+    //   e.preventDefault()
 
-    }
+    // }
 
     const handleSearch = async (query) => {
         const resp = await searchProduct(query)

@@ -19,10 +19,10 @@ module.exports = {
     try {
       const {email,password } = req.body
       const foundUser =await user.findOne({ where: { email } })
-      if (!foundUser || !(await bcrypt.compare(password, foundUser.password))) {
+      if (!foundUser || !(await bcrypt.compare(password,foundUser.password))) {
         return res.status(401).json({ message: "Invalid email or password" })
       }
-      const token = jwt.sign({ id: foundUser.id }, "secretkey", { expiresIn: "1h" })
+      const token = jwt.sign({ id:foundUser.id },"secretkey", { expiresIn: "1h" })
       res.json({ token })
     } catch (error) {
       console.error("Error during login:", error)
